@@ -1,0 +1,9 @@
+.venv/
+
+*.csv
+
+.idea/
+
+__pycache__/
+
+rf/
