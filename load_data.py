@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -7,7 +8,8 @@ from sklearn.preprocessing import RobustScaler, OneHotEncoder
 from sklearn.impute import SimpleImputer
 
 
-df = pd.read_csv('data/AB_NYC_2019.csv')
+_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'AB_NYC_2019.csv')
+df = pd.read_csv(_data_path)
 
 df = df[(df['availability_365'] > 0) & (df['price'] > 0)]
 
